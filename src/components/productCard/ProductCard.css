@@ -1,0 +1,162 @@
+.product-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  max-width: 360px;
+  width: 100%;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.12);
+}
+
+.product-image-wrapper {
+  position: relative;
+  background: #f5f5f7;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.discount-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: #e53935;
+  color: #fff;
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.product-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.product-prices {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.price-old {
+  font-size: 14px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.price-new {
+  font-size: 22px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.stock-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.stock-progress {
+  width: 100%;
+  height: 8px;
+  background: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stock-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #4caf50, #8bc34a);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.stock-text {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.product-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn-buy {
+  background: #1a73e8;
+  color: #fff;
+}
+
+.btn-buy:hover {
+  background: #1557b0;
+}
+
+.btn-info {
+  background: #f1f3f4;
+  color: #1a1a1a;
+}
+
+.btn-info:hover {
+  background: #e4e6e8;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+  .product-card {
+    max-width: 100%;
+  }
+
+  .product-name {
+    font-size: 16px;
+  }
+
+  .price-new {
+    font-size: 20px;
+  }
+
+  .product-buttons {
+    flex-direction: column;
+  }
+}
